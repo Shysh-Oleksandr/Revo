@@ -163,39 +163,6 @@ body._lock {
   margin: 0 auto;
 }
 
-input[type=text],
-input[type=email],
-input[type=tel],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.input {
-  border-radius: 0 !important;
-  width: 100%;
-  display: block;
-  height: 50px;
-  border: 2px solid #959595;
-  padding: 0 18px;
-  font-size: 15px;
-  line-height: 25px;
-  font-weight: 400;
-  color: #959595;
-  background-color: #252525;
-}
-
-textarea.input {
-  resize: none;
-  height: 100px;
-  padding: 10px 18px;
-  font-size: 15px;
-  line-height: 25px;
-  font-weight: 400;
-  color: #959595;
-}
-
 .btn {
   background: #C7A17A;
   cursor: pointer;
@@ -291,7 +258,7 @@ textarea.input {
   top: 0;
   left: 0;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .products__content,
@@ -1572,6 +1539,23 @@ textarea.input {
     max-width: none;
   }
 
+  .products__buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .products__link {
+    margin-top: 0;
+  }
+
   .giftset__item {
     margin-left: 0;
     padding-left: 30px;
@@ -1605,6 +1589,23 @@ textarea.input {
 
   .combo__text {
     max-width: none;
+  }
+
+  .combo__buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .combo__link {
+    margin-top: 0;
   }
 }
 

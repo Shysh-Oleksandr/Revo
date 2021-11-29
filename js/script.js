@@ -1,4 +1,4 @@
-	// Webp converter
+// Webp converter
 function testWebP(callback) {
 	var webP = new Image();
 	webP.onload = webP.onerror = function () {
@@ -17,47 +17,15 @@ testWebP(function (support) {
 });
 // /Webp converter
 
-// Burger menu
 $(document).ready(function() {
+	// Burger menu
 	$('.icon-menu').click(function(event) {
 		$('.icon-menu,.menu__body').toggleClass('_active');
 		$('body').toggleClass('_lock');
 	});
-});
-// /Burger menu
+	// /Burger menu
 
-// Responsive
-$(window).resize(function(event) {
-	adaptive_function();
-});
-
-function adaptive_header (w, h) {
-	var menu = $('.menu');
-	var introLogo = $('.intro__logo');
-	if(w<767.98) {
-		if(!introLogo.hasClass('done')){
-			introLogo.addClass('done').prependTo(menu);
-		}
-		
-	}
-	else {
-		if(introLogo.hasClass('done')){
-			introLogo.removeClass('done').appendTo($('.intro__column--1'));
-		}
-	}
-}
-
-function adaptive_function () {
-	var w=$(window).outerWidth();
-	var h=$(window).outerHeight();
-	adaptive_header(w, h);
-}
-
-adaptive_function();
-// /Responsive
-
-// Scroll to section
-$(function() {
+	// Scroll to section
 	$("[data-scroll]").on("click", function(event) {
 		event.preventDefault();
 
@@ -85,11 +53,9 @@ $(function() {
 			scrollTop: blockOffset
 		}, 500);
 	});
-});
-// /Scroll to section.
+	// /Scroll to section.
 
-// Slider
-$(document).ready(function(){
+	// Slider 
 	$('.products__content').slick({
 		adaptiveHeight: true,
 		speed: 700,
@@ -138,8 +104,38 @@ $(document).ready(function(){
 	        },
 	      ]
 	});
+	// /Slider
 });
-// /Slider
+
+// Responsive
+$(window).resize(function(event) {
+	adaptive_function();
+});
+
+function adaptive_header (w, h) {
+	var menu = $('.menu');
+	var introLogo = $('.intro__logo');
+	if(w<767.98) {
+		if(!introLogo.hasClass('done')){
+			introLogo.addClass('done').prependTo(menu);
+		}
+		
+	}
+	else {
+		if(introLogo.hasClass('done')){
+			introLogo.removeClass('done').appendTo($('.intro__column--1'));
+		}
+	}
+}
+
+function adaptive_function () {
+	var w=$(window).outerWidth();
+	var h=$(window).outerHeight();
+	adaptive_header(w, h);
+}
+
+adaptive_function();
+// /Responsive
 
 // Tabs
 const tabsBtn = document.querySelectorAll(".tabs__item");
